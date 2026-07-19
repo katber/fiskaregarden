@@ -1,0 +1,47 @@
+/* Fiskaregården — Spacing Tokens
+ * 4px base grid. Generous whitespace reflects Scandinavian restraint.
+ */
+
+:root {
+  --space-0:    0px;
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:    12px;
+  --space-4:    16px;
+  --space-5:    20px;
+  --space-6:    24px;
+  --space-8:    32px;
+  --space-10:   40px;
+  --space-12:   48px;
+  --space-16:   64px;
+  --space-20:   80px;
+  --space-24:   96px;
+  --space-32:   128px;
+  --space-40:   160px;
+  --space-48:   192px;
+
+  /* ── Semantic spacing ───────────────────────────── */
+  --gap-xs:     var(--space-2);
+  --gap-sm:     var(--space-4);
+  --gap-md:     var(--space-6);
+  --gap-lg:     var(--space-10);
+  --gap-xl:     var(--space-16);
+
+  --padding-card:       var(--space-8);
+  --padding-section:    var(--space-20);
+  --padding-container:  var(--space-8);
+
+  /* ── Border radii ───────────────────────────────── */
+  --radius-none:  0px;
+  --radius-sm:    2px;
+  --radius-md:    4px;
+  --radius-lg:    8px;
+  --radius-xl:    12px;
+  --radius-full:  9999px;
+
+  /* ── Container widths ───────────────────────────── */
+  --container-sm:   640px;
+  --container-md:   960px;
+  --container-lg:   1200px;
+  --container-xl:   1440px;
+}

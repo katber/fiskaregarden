@@ -1,0 +1,9 @@
+/* Fiskaregården Design System — Global Entry Point
+ * Import this single file to receive all tokens and font faces.
+ * Do not add rules here directly; use the token files.
+ */
+
+@import './tokens/typography.css';
+@import './tokens/colors.css';
+@import './tokens/spacing.css';
+@import './tokens/shadows.css';

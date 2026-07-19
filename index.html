@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<template id="__bundler_thumbnail" data-bg-color="#141210">
+  <svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <rect width="1200" height="800" fill="#141210"/>
+    <text x="600" y="420" font-family="Georgia,serif" font-size="220" font-weight="200" fill="#F4F1EB" text-anchor="middle" opacity="0.9">F</text>
+    <rect x="520" y="480" width="160" height="2" fill="#B44030"/>
+    <text x="600" y="560" font-family="Georgia,serif" font-size="28" font-weight="300" fill="#8C8278" text-anchor="middle" letter-spacing="8">FISKAREGÅRDEN</text>
+  </svg>
+</template>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/tokens/typography.css">
+  <link rel="stylesheet" href="_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/tokens/colors.css">
+  <link rel="stylesheet" href="_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/tokens/spacing.css">
+  <link rel="stylesheet" href="_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/tokens/shadows.css">
+  <style>
+    :root {
+      --f: 'Spectral', Georgia, serif;
+      --f-sans: 'ElmsSans', system-ui, sans-serif;
+      --f-serif: 'Spectral', Georgia, serif;
+      --c-dark: #141210;
+      --c-mid: #252220;
+      --c-cream: #F4F1EB;
+      --c-warm: #EDE9E1;
+      --c-terra: #B44030;
+      --c-stone: #8C8278;
+      --c-sage: #8BA89E;
+      --c-sea: #6FA3B5;
+      --t-display: 112px;
+      --t-title: 82px;
+      --t-sub: 52px;
+      --t-body: 34px;
+      --t-small: 28px;
+      --t-label: 24px;
+      --px: 120px;
+      --py: 96px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { overflow: hidden; }
+    body { background: #141210; }
+    a { color: inherit; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(36px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes lineGrow {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+    @keyframes kenBurns {
+      from { transform: scale(1.07); }
+      to   { transform: scale(1.0); }
+    }
+    @keyframes fadeRight {
+      from { opacity: 0; transform: translateX(-32px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes countUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes galleryCross {
+      0%    { opacity: 1; }
+      25.3% { opacity: 1; }
+      33.3% { opacity: 0; }
+      92%   { opacity: 0; }
+      100%  { opacity: 1; }
+    }
+    @keyframes gallerySlowZoom {
+      0%   { transform: scale(1.06) translateZ(0); }
+      50%  { transform: scale(1.16) translateZ(0); }
+      100% { transform: scale(1.06) translateZ(0); }
+    }
+
+    /* Animation fill-mode:both means the `from` state hides elements before
+       the animation fires — no need for a global opacity:0 rule. Elements on
+       non-active slides (and in print) remain at their natural visible state. */
+    @media (prefers-reduced-motion: no-preference) {
+      [data-deck-active] [data-a="up"]    { animation: fadeUp    1s   cubic-bezier(0.22,0,0.1,1) both; }
+      [data-deck-active] [data-a="in"]    { animation: fadeIn    1.1s ease both; }
+      [data-deck-active] [data-a="right"] { animation: fadeRight 1s   cubic-bezier(0.22,0,0.1,1) both; }
+      [data-deck-active] [data-a="count"] { animation: countUp   0.9s cubic-bezier(0.22,0,0.1,1) both; }
+      [data-deck-active] [data-a="line"]  { animation: lineGrow  0.9s cubic-bezier(0.22,0,0.1,1) both; }
+      [data-deck-active] .kb              { animation: kenBurns  14s  cubic-bezier(0.25,0,0.1,1) both; will-change: transform; backface-visibility: hidden; }
+    }
+
+    .lbl {
+      font-family: var(--f-sans);
+      font-size: var(--t-label);
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .light { font-weight: 200; }
+  </style>
+</helmet>
+
+<x-import component-from-global-scope="deck-stage" from="./deck-stage.js" width="1920" height="1080" hint-size="100%,100%" data-uneditable="">
+
+  <!-- ══════════════════════════════════════════════════
+       01 — COVER
+  ══════════════════════════════════════════════════ -->
+  <section data-label="01 Omslag" data-screen-label="Cover" style="background:#0d0c0a; overflow:hidden;">
+    <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.85;" autoplay="" muted="" playsinline="">
+      <source src="uploads/Video_reel_for_real_estate_202607032041-ce9fb644.mp4" type="video/mp4">
+    </video>
+
+
+    <div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: var(--py) var(--px); left: -10px; top: -58px">
+      <img src="_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/assets/images/logo-white.png" alt="Fiskaregården" style="height: 249px; opacity: 0.85; width: 755px; position: absolute; left: 599px; top: 412px"><span style="font-size: 44px; font-family: Spectral; font-style: italic; width: 559px; height: 67px; position: absolute; left: 700px; top: 646px; font-weight: 200">Hem vid havet. Platser för livet.</span><div data-a="in" style="animation-delay:0.05s; margin-bottom:36px; display:flex; align-items:center; gap:24px;">
+        
+      </div>
+
+      <div data-a="up" style="animation-delay:0.2s; font-family:var(--f); font-size:var(--t-display); font-weight:200; color:var(--c-cream); line-height:0.92; letter-spacing:-0.03em; margin-bottom:44px;">
+        
+      </div>
+
+      
+
+      <div data-a="up" style="animation-delay:0.65s; font-family:var(--f-serif); font-size:44px; font-weight:200; font-style:italic; color:rgba(244,241,235,0.65); line-height:1.45; letter-spacing:0;">
+        
+      </div>
+    </div>
+
+    <div data-a="in" style="animation-delay:1.1s; position:absolute; bottom:var(--py); right:var(--px); font-family:var(--f-sans); font-size:var(--t-label); font-weight:300; letter-spacing:0.12em; color:rgba(244,241,235,0.3);">
+      <span>2026</span>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       02 — OM BOLAGET
+  ══════════════════════════════════════════════════ -->
+  <section data-label="02 Drivkraft" data-screen-label="Vår drivkraft" style="background:#1C1A18; overflow:hidden; display:flex; align-items:stretch; position:relative;" data-om-label="Section 02">
+    <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" autoplay="" muted="" loop="" playsinline="">
+      <source src="uploads/4735068-hd_1280_720_25fps.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute; inset:0; background:linear-gradient(to right, rgba(20,18,16,0.45), rgba(20,18,16,0.25));"></div>
+    <!-- Left: statement -->
+    <div style="width:52%; display:flex; flex-direction:column; justify-content:center; padding:var(--py) 80px var(--py) var(--px); border-right:1px solid rgba(255,255,255,0.06); position:relative; z-index:1;">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-white); font-size: 16px">Vår drivkraft</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f); font-size:var(--t-title); font-weight:100; color:var(--c-cream); line-height:1.05; letter-spacing:-0.02em; margin-bottom:8px;">
+        <span style="font-family: Spectral">Vi vill inte vara störst.</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.25s; font-family:var(--f-serif); font-size:var(--t-title); font-weight:100; font-style:italic; color:rgba(244,241,235,0.55); line-height:1.05; letter-spacing:-0.01em; margin-bottom:52px;">
+        <span style="color: var(--color-white)">Vi vill vara rätt.</span>
+      </div>
+      
+    </div>
+
+    <!-- Right: body -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--py) var(--px) var(--py) 80px; gap:44px; position:relative; z-index:1;">
+      <div data-a="up" style="animation-delay:0.28s;">
+        <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:400; color:var(--c-cream); line-height:1.3; margin-bottom:16px;"><span>Människor och platser</span></div>
+        <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:var(--c-stone); line-height:1.3;"><span style="color: var(--color-white)">Vi värnar om de som bor i våra hem och om de platser vi väljer att bygga på. Boplatsen är central för människan — särskilt i tider av teknologisk omdaning, när hemmet mer än någonsin är ett ankare.</span></div>
+      </div>
+      <div data-a="up" style="animation-delay:0.4s;">
+        <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:400; color:var(--c-cream); line-height:1.3; margin-bottom:16px;"><span>Forskning möter arv</span></div>
+        <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:var(--c-stone); line-height:1.3;"><span style="color: var(--color-white)">Vi omfamnar de senaste insikterna från akademien och förenar dem med det nordiska arkitekturarvet — en tradition av enkelhet, hållbarhet och respekt för naturen.</span></div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+       03 — CITAT / FILOSOFI
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       04 — BOHUSLÄN (section image)
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       05 — DRIVKRAFT
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       06 — STRATEGI
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       06 — PROJEKTÖVERSIKT
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       07 — BRF SANDHAGEN / BADIS
+  ══════════════════════════════════════════════════ -->
+  <section data-label="03 Bohuslän" data-screen-label="Bohuslän" style="background:var(--c-cream); overflow:hidden; display:flex;" data-om-label="Section 03">
+    
+    
+    <div style="width:50%; display:flex; flex-direction:column; justify-content:center; padding:var(--py) 64px var(--py) var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-stone-600); font-size: 16px">LEVANDE HEM&nbsp;</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f); font-size:var(--t-title); font-weight:100; color:var(--color-stone-700); line-height:1.02; letter-spacing:-0.025em; margin-bottom:40px;">
+        <span style="font-family: Spectral; color: var(--color-stone-700)">Vi utvecklar i miljöer</span><br>
+        <span style="font-family: var(--f-serif); font-style: italic; color: var(--color-sage-500)">vi känner.</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.48s; width:56px; height:1px; background:var(--c-sage); margin-bottom:36px;"></div>
+      <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:#524D49; line-height:1.3; max-width:560px;">Vi designar för känslor, identitet och livskvalitet – långt bortom bara kvadratmeter. Genom att integrera neuroarkitektur och sensorisk design skapas miljöer som minskar stress och ökar välmående genom genomtänkt ljusinsläpp, akustik och taktila material. Med fokus på platsens själ och ”livet mellan husen” aktiveras även gemensamma ytor som innergårdar och entréer. Resultatet är bostäder med karaktär som lyfter vardagen och förvandlar byggnader till levande hem.&nbsp;</div>
+    </div>
+    <div data-a="in" style="animation-delay:0.15s; width:50%; position:relative; overflow:hidden;">
+      <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" autoplay="" muted="" loop="" playsinline="">
+        <source src="uploads/7671666-hd_1080_1920_24fps-7d65fce3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       04b — PROJEKT (DIVIDER)
+  ══════════════════════════════════════════════════ -->
+  <section data-label="04 Om oss" data-screen-label="Om oss" style="background:var(--c-warm); overflow:hidden; display:flex;">
+
+    <!-- Left dark panel -->
+    <div style="width:40%; background:var(--c-dark); flex-shrink:0; display:flex; flex-direction:column; justify-content:center; padding:var(--px);">
+      
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f-sans); font-size:128px; font-weight:200; color:var(--c-cream); line-height:1; letter-spacing:-0.03em; margin-bottom:14px;">
+        <span></span>
+      </div>
+      <div data-a="up" style="animation-delay:0.28s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:var(--c-stone); line-height:1.3;">
+        <span></span>
+      </div>
+      <div data-a="line" style="animation-delay:0.5s; width:56px; height:1px; background:var(--c-sage); margin-top:64px;"></div>
+    </div>
+
+    <!-- Right content -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--py) var(--px) var(--py) 80px;">
+      <div data-a="up" style="animation-delay: 0.1s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--color-stone-700); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 36px; width: 953px; height: 259px">
+        <div data-a="in" style="animation-delay: 0.05s; margin-bottom: 28px; font-size: 16px; font-family: -apple-system, &quot;system-ui&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; width: 947px; height: 22px">
+        <span class="lbl" style="color: var(--color-stone-600); font-size: 16px">Om oss</span>
+      </div><span style="font-family: Spectral">Liten kärna</span><br>
+        <span style="font-family: var(--f-serif); color: var(--color-sage-500); font-style: italic; width: 395px; height: 156px">Stort nätverk</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.42s; width:56px; height:1px; background:var(--c-sage); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.25s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#524D49; line-height:1.3; max-width:660px; margin-bottom:64px;">
+        <div style="width: 889px; height: 207px">Fiskaregårdens organisation består av en liten, kompetent kärna inom affär, koncept och finansiering som formar projekten från idé till slutprodukt. Runt oss finns ett långsiktigt nätverk av kommuner, arkitekter och entreprenörer. Vårt arbetssätt förenar ”Butiken” (plats, marknad, målgrupp) med ”Fabriken” (planering, struktur, genomförande). Affären skapas i det kontinuerliga samspelet däremellan.&nbsp;</div><span></span>
+      </div>
+
+      <div style="display:flex; gap:72px;">
+        <div data-a="count" style="animation-delay:0.35s;">
+          <div style="font-family:var(--f-sans); font-size:68px; font-weight:200; color:var(--c-dark); line-height:1;"><span>10+</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:12px;"><span style="font-size: 16px; color: var(--color-stone-400)">Projekt</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.45s;">
+          <div style="font-family:var(--f-sans); font-size:68px; font-weight:200; color:var(--c-dark); line-height:1;"><span>BRF</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:12px;"><span style="font-size: 16px; color: var(--color-stone-400)">Specialister</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.55s;">
+          <div style="font-family:var(--f-sans); font-size:68px; font-weight:200; color:var(--c-dark); line-height:1;"><span>100%</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:12px;"><span style="font-size: 16px; color: var(--color-stone-400)">Sålda hem</span></div>
+        </div>
+      </div>
+    </div>
+  </section><section data-label="05 Hur vi jobbar" data-screen-label="Hur vi jobbar" style="background:var(--c-warm); overflow:hidden; display:flex;">
+
+    <!-- Left dark panel -->
+    
+
+    <!-- Right content -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--py) var(--px) var(--py) 80px;">
+      <span class="lbl" style="color: var(--color-stone-600); font-size: 16px; width: 953px; height: 8px; display:block; margin-bottom:28px;">HUR VI JOBBAR</span>
+      <div data-a="up" style="animation-delay: 0.1s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--color-stone-700); line-height: 1.05; letter-spacing: -0.02em; margin-bottom: 36px; width: 948px; height: 149px">
+        <div data-a="in" style="animation-delay: 0.05s; margin-bottom: 52px; font-size: 16px; font-family: -apple-system, &quot;system-ui&quot;, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif">
+        
+      </div><span style="font-family: Spectral; width: 332px; height: 187px">Butiken &amp;<br>&nbsp;<span style="letter-spacing: -1.64px; font-style: italic; font-family: var(--f-serif); color: var(--color-sage-500);">fabriken</span></span><br>
+        <span></span>
+      </div><span style="padding-top: 100px; padding-bottom: 100px; font-size: 24px; font-family: ElmsSans, system-ui, sans-serif; color: var(--color-stone-800); font-weight: 300"><b style="font-weight: 500">Butiken</b>: Här formas projektets koncept utifrån platsens förutsättningar och marknadens behov. Genom djupgående analys utvecklas erbjudandet med hjälp av skräddarsydda expertteam av arkitekter, mäklare och marknadsförare.<br><br><b style="font-style: normal; font-weight: 500">Fabriken</b>: Här drivs genomförandet genom en strukturerad process där vi samordnar detaljplan, projektering, entreprenad och juridik. Vi samarbetar nära kommuner, arkitekter, tekniska specialister och byggentreprenörer för att tidigt säkra helhet, kvalitet och förutsägbarhet.&nbsp;</span><div data-a="up" style="animation-delay:0.25s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#524D49; line-height:1.3; max-width:660px; margin-bottom:64px;">
+        
+      </div>
+
+      
+    </div><div style="width:40%; background:var(--c-dark); flex-shrink:0; display:flex; flex-direction:column; justify-content:center; padding:var(--px);">
+      
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f-sans); font-size:128px; font-weight:200; color:var(--c-cream); line-height:1; letter-spacing:-0.03em; margin-bottom:14px;">
+        <span></span>
+      </div>
+      <div data-a="up" style="animation-delay:0.28s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:var(--c-stone); line-height:1.3;">
+        <span></span>
+      </div>
+      <div data-a="line" style="animation-delay:0.5s; width:56px; height:1px; background:var(--c-sage); margin-top:64px;"></div>
+    </div><span style="letter-spacing: -1.64px; font-style: italic; font-family: var(--f-serif); color: var(--color-sage-500);">fabriken</span>
+  </section>
+
+  <section data-label="06 Projekt" data-screen-label="Projekt" style="background:var(--c-dark); overflow:hidden; display:flex; align-items:center; justify-content:center;">
+    <div style="display:flex; flex-direction:column; align-items:center; text-align:center;">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color:var(--c-stone); font-size:16px;">PORTFOLIO</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.15s; font-family: Spectral; font-size: var(--t-title); font-weight: 100; color: var(--color-stone-100); line-height: 1.02; letter-spacing: -0.025em">Genomförda &amp; planerade projekt</div>
+      <div data-a="line" style="animation-delay:0.48s; width:56px; height:1px; background:var(--c-sage); margin-top:36px;"></div>
+    </div>
+  </section><section data-label="07 Brf Sandhagen" data-screen-label="Brf Sandhagen" style="background:var(--c-warm); overflow:hidden; display:flex;" data-om-label="Section 05">
+    <!-- Left: image (crossfading gallery, ken burns) -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); min-width:0; margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="gallery-track" style="position:absolute; inset:0; transform:translateZ(0); backface-visibility:hidden;">
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:1; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Badis_exterior_flygbild05-1f5ae73e.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Kok_04-5a40b980.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Badrum_04-4b3e282c.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Sovrum_04-8e4f8859.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Toppvaning03.jpg') center/cover;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: content -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: var(--py) var(--px) var(--py) 80px; background-color: var(--color-cream)">
+      <div data-a="in" style="animation-delay:0.1s; margin-bottom:28px;">
+        
+      </div>
+      <div data-a="up" style="animation-delay:0.2s; font-family:var(--f); font-size:var(--t-title); font-weight:100; color:var(--color-stone-700); line-height:1.02; letter-spacing:-0.025em; margin-bottom:10px;">
+        
+      </div>
+      <div data-a="up" style="animation-delay:0.3s; font-family:var(--f-serif); font-size:var(--t-sub); font-weight:200; font-style:italic; color:var(--c-stone); margin-bottom:48px;">
+        <span></span>
+      </div>
+      
+      
+      <span class="lbl" style="color: var(--color-stone-700); font-size: 16px; display:block; margin-bottom:28px;">GENOMFÖRT PROJEKT</span><span style="font-size: 82px; font-family: Spectral, Georgia, serif; color: var(--color-stone-700); font-weight: 100; font-style: normal; width: 758px; height: 88px">Brf Sandhagen<br></span><span style="font-size: 82px; font-family: Spectral, Georgia, serif; color: var(--color-sage-500); font-weight: 100; font-style: italic; width: 757px; height: 125px">Fjällbacka</span><div data-a="line" style="animation-delay: 0.42s; width: 56px; height: 1px; margin-top: 44px; margin-bottom: 44px; background-color: var(--color-sage-500)"></div><div data-a="up" style="animation-delay: 0.48s; font-family: var(--f-sans); font-size: 24px; font-weight: 300; color: #524D49; line-height: 1.3; max-width: 540px; margin-bottom: 52px; width: 649px; height: 657px">
+        <span style="width: 658px; height: 511px; color: var(--color-stone-600)">Mitt i centrala Fjällbacka har vi uppfört vi brf Sandhagen. Bostadsrättsföreningen består av sju exklusiva lägenheter, alla med majestätisk utsikt över Fjällbackas hamninlopp. Till varje lägenhet är en båtplats knuten som ligger i direkt anslutning till den nylagda kajen precis nedanför</span>
+      </div><div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.58s;">
+          <div style="font-family:var(--f-sans); font-size:80px; font-weight:200; color:var(--c-dark); line-height:1;"><span>7</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px; color: var(--color-stone-400)">LÄGENHETER</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.68s;">
+          <div style="font-family:var(--f-sans); font-size:80px; font-weight:200; color:var(--c-dark); line-height:1;"><span>100%</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px; color: var(--color-stone-400)">SÅLT</span></div>
+        </div>
+      </div>
+    </div>
+  </section><section data-label="08 Forsberget" data-screen-label="Forsberget — Kungsbacka" style="background:var(--c-mid); overflow:hidden; display:flex;">
+    <!-- Left: content -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--py) 80px var(--py) var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-white); font-size: 16px">Pågående projekt</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.15s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--c-cream); line-height: 1.02; letter-spacing: -0.025em; margin-bottom: 10px; width: 796px; height: 58px">
+        <span style="width: 351px; height: 103px; font-family: Spectral">Forsberget</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.25s; font-family: var(--f-serif); font-size: var(--t-sub); font-weight: 200; font-style: italic; color: var(--c-stone); margin-bottom: 44px; width: 792px; height: 162px">
+        <span style="color: var(--color-sage-300); font-size: 82px; width: 381px; height: 103px">Kungsbacka</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.38s; width:56px; height:1px; background:var(--c-sage); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.44s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#8C8278; line-height:1.3; max-width:560px; margin-bottom:52px;">
+        <span style="color: var(--color-white)">Tillsammans med Koberg Förvaltning och BJC Group. Positivt planbesked för etapp ett — ett attraktivt och hållbart bostadsområde med utsikt och god service.</span>
+      </div>
+      <div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.54s;">
+          <div style="font-family:var(--f-sans); font-size:72px; font-weight:200; color:var(--c-cream); line-height:1;"><span>120</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px">Bostäder</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.64s;">
+          <div style="font-family:var(--f-sans); font-size:72px; font-weight:200; color:var(--c-cream); line-height:1;"><span>70+</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px">Seniorboende</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: image -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="kb" style="position:absolute; inset:0; background:url('_ds/fiskareg-rden-design-system-4b654f68-de2d-4f84-8b7c-e5191d449b88/assets/images/Vardagsrum_utsikt.jpg') center/cover;"></div>
+      
+    </div>
+  </section><section data-label="09 Surte Glasbruk" data-screen-label="Surte Glasbruk" style="background:var(--c-warm); overflow:hidden; display:flex;" data-om-label="Section 07">
+    <!-- Left: image (crossfading gallery, ken burns) -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); min-width:0; margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="gallery-track" style="position:absolute; inset:0; transform:translateZ(0); backface-visibility:hidden;">
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:1; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Camilla_Sporre_Fiskaregarden-scaled-1-c2e07a98.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Surte_Glasbruk_Fiskaregarden-scaled-b1f9d47a.jpg') center/cover;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right: content -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: var(--py) var(--px) var(--py) 80px; background-color: var(--color-cream)">
+      <div data-a="in" style="animation-delay:0.1s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-stone-700); font-size: 16px">Kommande projekt</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.2s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--color-stone-700); line-height: 1.02; letter-spacing: -0.025em; margin-bottom: 10px; width: 757px; height: 55px">
+        <span style="font-family: Spectral">Surte Glasbruk</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.3s; font-family:var(--f-serif); font-size:var(--t-sub); font-weight:200; font-style:italic; color:var(--c-stone); margin-bottom:44px;">
+        <span style="font-size: 82px; color: var(--color-sage-500)">Ale kommun</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.42s; width:56px; height:1px; background:var(--c-sea); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.48s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#524D49; line-height:1.3; max-width:540px; margin-bottom:52px;">
+        <span>Det stora industriområdet kring det gamla glasbruket i centrala Surte omvandlas till en levande blandby med bostäder, småskalig verksamhet, kultur och service.</span>
+      </div>
+      <div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.58s;">
+          <div style="font-family:var(--f-sans); font-size:80px; font-weight:200; color:var(--c-dark); line-height:1;"><span>700</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px; color: var(--color-stone-400)">Bostäder</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.68s;">
+          <div style="font-family:var(--f-sans); font-size:80px; font-weight:200; color:var(--c-dark); line-height:1;"><span>Mix</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px; color: var(--color-stone-400)">Blandstad</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       10b — KÄLLÖ-KNIPPLA / BRF RÖDDEVIGA
+  ══════════════════════════════════════════════════ -->
+  <section data-label="10 Källö-Knippla" data-screen-label="Källö-Knippla" style="background:var(--c-mid); overflow:hidden; display:flex;">
+    <!-- Left: content -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: var(--py) 80px var(--py) var(--px); background-color: var(--color-stone-800)">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-white); font-size: 16px">GENOMFÖRT PROJEKT</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.15s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--c-cream); line-height: 1.02; letter-spacing: -0.025em; margin-bottom: 10px; width: 797px; height: 62px">
+        
+      <span style="font-family: Spectral; width: 495px; height: 104px; font-size: 80px">Fiskaregården</span></div>
+      <div data-a="up" style="animation-delay: 0.25s; font-family: var(--f-serif); font-size: var(--t-sub); font-weight: 200; font-style: italic; color: var(--c-stone); margin-bottom: 44px; width: 795px; height: 120px">
+        <span style="color: var(--color-sage-300); font-size: 80px">Källö-Knippla</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.38s; width:56px; height:1px; background:var(--c-sage); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.44s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#8C8278; line-height:1.3; max-width:560px; margin-bottom:52px;">
+        <span style="color: var(--color-white)">Uppe på klippan hittar du Källö-Knipplas mest magnifika läge. Hela Västerhavet breder ut sig nedanför och i norr skymtar Marstrands välkända silhuett. Här har vi uppfört moderna 2-planshus med terrass och uteplats, förråd och parkering.</span>
+      </div>
+      <div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.54s;">
+          <div style="font-family:var(--f-sans); font-size:72px; font-weight:200; color:var(--c-cream); line-height:1;"><span>10</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px">VILLOR</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: image (crossfading gallery, same ken burns treatment) -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); min-width:0; margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="gallery-track" style="position:absolute; inset:0; transform:translateZ(0); backface-visibility:hidden;">
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:1; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/cam10.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/25417773-f887086a.jpg') center/cover;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       11 — LUNDEN, GÖTEBORG
+  ══════════════════════════════════════════════════ -->
+  <section data-label="11 Lunden" data-screen-label="Lunden — Göteborg" style="background:#0d0c0a; overflow:hidden; display:flex;">
+    <!-- Left: image -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); min-width:0; margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="kb" style="position:absolute; inset:0; background:url('uploads/Fagelperspektiv_low-1-4635b7e1.jpg') center/cover;"></div>
+    </div>
+    <!-- Right: content -->
+    <div style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: var(--py) var(--px) var(--py) 80px; background-color: var(--color-cream)">
+      <div data-a="in" style="animation-delay:0.1s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-stone-600); font-size: 16px">Kommande projekt</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.2s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--c-cream); line-height: 1.02; letter-spacing: -0.025em; margin-bottom: 10px; width: 792px; height: 60px">
+        <span style="width: 253px; height: 107px; font-family: Spectral; color: var(--color-stone-800)">Lunden</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.3s; font-family: var(--f-serif); font-size: var(--t-sub); font-weight: 200; font-style: italic; color: var(--c-stone); margin-bottom: 44px; width: 792px; height: 128px">
+        <span style="color: var(--color-sage-500); font-size: 82px">Göteborg</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.44s; width:56px; height:1px; background:var(--c-sea); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.5s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:var(--c-cream); opacity:0.75; line-height:1.3; max-width:520px; margin-bottom:52px;">
+        <span style="width: 513px; height: 130px; color: var(--color-stone-600)">Vid Överstegatan i stadsdelen Lunden planerar vi ca 60 bostadslägenheter. Detaljplanen genomförs tillsammans med Göteborgs Stad och Tengbom Arkitekter.</span>
+      </div>
+      <div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.6s;">
+          <div style="height:72px; display:flex; align-items:flex-end; font-family:var(--f-sans); font-size:72px; font-weight:200; color:var(--c-cream); line-height:1;"><span style="color: var(--color-stone-900)">60</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px">Lägenheter</span></div>
+        </div>
+        <div data-a="count" style="animation-delay:0.7s;">
+          
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       11b — FISKAREGÅRDEN / KÄLLÖ-KNIPPLA
+  ══════════════════════════════════════════════════ -->
+  <section data-label="12 Röddeviga" data-screen-label="Röddeviga — Källö-Knippla" style="background:var(--c-mid); overflow:hidden; display:flex;">
+    <!-- Left: content -->
+    <div style="flex:1; display:flex; flex-direction:column; justify-content:center; padding:var(--py) 80px var(--py) var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-white); font-size: 16px">GENOMFÖRT PROJEKT</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.15s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--c-cream); line-height: 1.02; letter-spacing: -0.025em; margin-bottom: 10px; width: 802px; height: 61px">
+        <span style="font-family: Spectral; width: 463px; height: 99px; font-size: 80px">Röddeviga</span>
+      </div>
+      <div data-a="up" style="animation-delay: 0.25s; font-family: var(--f-serif); font-size: var(--t-sub); font-weight: 200; font-style: italic; color: var(--c-stone); margin-bottom: 44px;">
+        <span style="color: var(--color-sage-300); font-size: 80px">Källö-knippla</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.38s; width:56px; height:1px; background:var(--c-sage); margin-bottom:44px;"></div>
+      <div data-a="up" style="animation-delay:0.44s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#8C8278; line-height:1.3; max-width:560px; margin-bottom:52px;">
+        <span style="color: var(--color-white)">Med svart slät träpanel, svarta fönsterbågar och rena linjer smälter den före detta skolan in i landskapet där den ligger på gränsen till naturområdet på norra Källön. Taken är täckta av sedum för att än mer anpassa byggnaderna till läget och återspegla områdets rika flora. Namnet Röddeviga? Ja, det är Öckerömål och betyder roddviken.</span>
+      </div>
+      <div style="display:flex; gap:56px;">
+        <div data-a="count" style="animation-delay:0.54s;">
+          <div style="font-family:var(--f-sans); font-size:72px; font-weight:200; color:var(--c-cream); line-height:1;"><span>15</span></div>
+          <div class="lbl" style="color:var(--c-stone); margin-top:10px;"><span style="font-size: 16px">Lägenheter</span></div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: image (crossfading gallery, same ken burns treatment) -->
+    <div data-a="in" style="animation-delay:0.15s; flex:0 0 calc(48% + 2px); width:calc(48% + 2px); min-width:0; margin-inline:-1px; position:relative; overflow:hidden; transform:translateZ(0); backface-visibility:hidden;">
+      <div class="gallery-track" style="position:absolute; inset:0; transform:translateZ(0); backface-visibility:hidden;">
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:1; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/Interior_Vardagsrum.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/exterior_1_roddeviga-1.jpg') center/cover;"></div>
+        </div>
+        <div class="gallery-layer" style="position:absolute; inset:0; opacity:0; transition:opacity 2.5s ease-in-out;">
+          <div style="position:absolute; inset:0; animation:gallerySlowZoom 24s ease-in-out infinite; will-change:transform; backface-visibility:hidden; background:url('uploads/exterior_2_roddeviga-1-01e50a27.jpg') center/cover;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       11c — KÄLLÖ-KNIPPLA (COPY)
+  ══════════════════════════════════════════════════ -->
+  
+
+  <!-- ══════════════════════════════════════════════════
+       02 — OM BOLAGET
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       08 — BRF LEOPOLD
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       09 — SURTE GLASBRUK (BIG NUMBER)
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       10 — FORSBERGET
+  ══════════════════════════════════════════════════ -->
+  
+
+
+
+  <!-- ══════════════════════════════════════════════════
+       12 — HÅLLBARHET
+  ══════════════════════════════════════════════════ -->
+  
+
+
+  <!-- ══════════════════════════════════════════════════
+       12b — HÅLLBARHET VIDEO
+  ══════════════════════════════════════════════════ -->
+  <section data-label="13 Hållbarhet" data-screen-label="Hållbarhet — Film" style="background:#0d0c0a; overflow:hidden;">
+    <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" autoplay="" muted="" loop="" playsinline="">
+      <source src="uploads/11927302_1280_720_60fps.mp4" type="video/mp4">
+    </video>
+    <div style="position:absolute; inset:0; background:rgba(13,12,10,0.3);"></div>
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        
+      </div>
+      <div data-a="up" style="animation-delay: 0.15s; font-family: var(--f); font-size: var(--t-title); font-weight: 100; color: var(--c-cream); letter-spacing: -0.025em; margin-bottom: 56px; width: 1682px; height: 105px; position: relative">
+        <span style="font-family: Spectral; font-style: normal; width: 551px; height: 94px; line-height: 0,5; position: absolute; left: -14px; top: -136px">Varsamhet &amp;<br></span><span style="font-family: Spectral; font-style: italic; position: absolute; left: -10px; top: -52px; font-size: 82px">trygghet</span></div>
+      <div style="display: flex; gap: 60px; max-width: 1500px; position: absolute; left: 109px; top: 610px">
+        <div data-a="up" style="animation-delay:0.26s; flex:1;">
+          <div style="width:44px; height:2px; background:var(--c-sage); margin-bottom:28px;"></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:400; color:var(--c-cream); margin-bottom:16px; line-height:1.3;"><span>Kvalitet som varar</span></div>
+          <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:rgba(244,241,235,0.7); line-height:1.3;"><span>Vi bygger för framtiden. Materialval och konstruktion håller i generationer, inte bara till garantitidens slut.</span></div>
+        </div>
+        <div data-a="up" style="animation-delay:0.36s; flex:1;">
+          <div style="width:44px; height:2px; background:var(--c-sage); margin-bottom:28px;"></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:400; color:var(--c-cream); margin-bottom:16px; line-height:1.3;"><span>Platsens själ</span></div>
+          <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:rgba(244,241,235,0.7); line-height:1.3;"><span>Varje projekt anpassas efter sin plats. Arkitektur som respekterar och förstärker det kustnära landskapet.</span></div>
+        </div>
+        <div data-a="up" style="animation-delay:0.46s; flex:1;">
+          <div style="width:44px; height:2px; background:var(--c-sage); margin-bottom:28px;"></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:400; color:var(--c-cream); margin-bottom:16px; line-height:1.3;"><span>Trygg partner</span></div>
+          <div style="font-family:var(--f-sans); font-size:24px; font-weight:300; color:rgba(244,241,235,0.7); line-height:1.3;"><span>Med en ytterst solid ekonomi, och<br>en lång historia i Västsverige, skapas<br>naturlig trygghet i våra projekt.<br></span></div>
+        </div>
+      </div>
+    <span class="lbl" style="color: var(--color-white); font-size: 16px; position: absolute; left: 120px; top: 277px">ALLTID I FOKUS</span></div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       13 — VIDEO
+  ══════════════════════════════════════════════════ -->
+  <section data-label="14 Livet vid havet" data-screen-label="Livet vid havet" style="background:var(--c-warm); overflow:hidden; display:flex;">
+    <!-- Left: content -->
+    <div style="width:46%; display:flex; flex-direction:column; justify-content:center; padding:var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:28px;">
+        <span class="lbl" style="color: var(--color-stone-600); font-size: 16px">INTE BARA BYGGNADER</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f); font-size:var(--t-title); font-weight:100; color:var(--color-stone-700); line-height:1.05; letter-spacing:-0.025em; margin-bottom:44px;">
+        <span style="font-family: Spectral">Mer tid för det</span><br>
+        <span style="font-style: italic; font-family: var(--f-serif); color: var(--color-sage-500)">som betyder något.</span>
+      </div>
+      <div data-a="line" style="animation-delay:0.42s; width:56px; height:1px; background:var(--c-sage); margin-bottom:40px;"></div>
+      <div data-a="up" style="animation-delay:0.48s; font-family:var(--f-sans); font-size:24px; font-weight:300; color:#6E6560; line-height:1.3; max-width:600px;">
+        <span style="width: 547px; height: 163px">Att bo vid Bohuslänkusten är att leva nära naturens rytm. Stenig kust, öppet hav, ljus som skiftar med årstiderna. Vi bygger hemmen — människorna skapar livet.</span>
+      </div>
+    </div>
+
+    <!-- Right: video -->
+    <div data-a="in" style="animation-delay:0.18s; flex:1; position:relative; overflow:hidden;">
+      <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;" autoplay="" muted="" loop="" playsinline="">
+        <source src="uploads/7218814-hd_720_1280_25fps-6d5615f3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       15 — KONTAKT
+  ══════════════════════════════════════════════════ -->
+  <section data-label="15 Kontakt" data-screen-label="Kontakt" style="background:#0d0c0a; overflow:hidden;">
+    <video style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.22;" autoplay="" muted="" loop="" playsinline="">
+      <source src="uploads/14317868-hd_1280_720_30fps-c56409cd.mp4" type="video/mp4">
+    </video>
+
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:var(--px);">
+      <div data-a="in" style="animation-delay:0.05s; margin-bottom:52px;">
+        
+      </div>
+
+      <div data-a="up" style="animation-delay:0.15s; font-family:var(--f); font-size:var(--t-title); font-weight:100; color:var(--c-cream); line-height:0.95; letter-spacing:-0.025em; margin-bottom:14px;">
+        <span style="font-family: Spectral">Välkommen</span>
+      </div>
+      <div data-a="up" style="animation-delay:0.25s; font-family:var(--f-serif); font-size:var(--t-title); font-weight:100; font-style:italic; color:rgba(244,241,235,0.42); line-height:0.95; letter-spacing:-0.01em; margin-bottom:72px;">
+        <span style="color: var(--color-white)">att ta kontakt.</span>
+      </div>
+
+      <div data-a="line" style="animation-delay:0.44s; width:72px; height:1px; background:var(--c-sage); margin-bottom:64px;"></div>
+
+      <div style="display:flex; gap:88px;">
+        <div data-a="up" style="animation-delay:0.5s;">
+          <div class="lbl" style="color:#6E6560; margin-bottom:16px;"><span style="color: var(--color-white); font-size: 16px">Adress</span></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:300; color:var(--c-cream); line-height:1.65;">
+            <span>Hamnfyrsvägen 3</span><br>
+            <span>423 40 Torslanda</span>
+          </div>
+        </div>
+        <div data-a="up" style="animation-delay:0.6s;">
+          <div class="lbl" style="color:#6E6560; margin-bottom:16px;"><span style="color: var(--color-white); font-size: 16px">E-post</span></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:300; color:var(--c-cream); line-height:1.65;">
+            <span>info@fiskaregarden.com</span>
+          </div>
+        </div>
+        <div data-a="up" style="animation-delay:0.7s;">
+          <div class="lbl" style="color:#6E6560; margin-bottom:16px;"><span style="color: var(--color-white); font-size: 16px">Webb</span></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:300; color:var(--c-cream); line-height:1.65;">
+            <span>fiskaregarden.com</span>
+          </div>
+        </div>
+        <div data-a="up" style="animation-delay:0.8s;">
+          <div class="lbl" style="color:#6E6560; margin-bottom:16px;"><span style="color: var(--color-white); font-size: 16px">Instagram</span></div>
+          <div style="font-family:var(--f-sans); font-size:var(--t-small); font-weight:300; color:var(--c-cream); line-height:1.65;">
+            <span>@fiskare_garden</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section></x-import></x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;$preview&quot;: {&quot;width&quot;: 1920, &quot;height&quot;: 1080},
+  &quot;headlineFont&quot;: {
+    &quot;editor&quot;: &quot;enum&quot;,
+    &quot;options&quot;: [&quot;Spectral&quot;, &quot;ElmsSans&quot;],
+    &quot;default&quot;: &quot;ElmsSans&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Typografi&quot;
+  },
+  &quot;accentColor&quot;: {
+    &quot;editor&quot;: &quot;color&quot;,
+    &quot;options&quot;: [&quot;#8BA89E&quot;, &quot;#6FA3B5&quot;, &quot;#B44030&quot;, &quot;#141210&quot;],
+    &quot;default&quot;: &quot;#8BA89E&quot;,
+    &quot;tsType&quot;: &quot;string&quot;,
+    &quot;section&quot;: &quot;Färg&quot;
+  },
+  &quot;overlayOpacity&quot;: {
+    &quot;editor&quot;: &quot;range&quot;,
+    &quot;min&quot;: 0,
+    &quot;max&quot;: 0.8,
+    &quot;step&quot;: 0.05,
+    &quot;default&quot;: 0.3,
+    &quot;tsType&quot;: &quot;number&quot;,
+    &quot;section&quot;: &quot;Färg&quot;
+  }
+}">
+class Component extends DCLogic {
+  componentDidUpdate() {
+    this._applyProps();
+  }
+
+  _applyProps() {
+    const font = this.props.headlineFont ?? 'ElmsSans';
+    const accent = this.props.accentColor ?? '#8BA89E';
+    const overlay = this.props.overlayOpacity ?? 0.3;
+    const fontStack = font === 'Spectral' ? "'Spectral', Georgia, serif" : "'ElmsSans', system-ui, sans-serif";
+    let style = document.getElementById('__tweak-overrides');
+    if (!style) { style = document.createElement('style'); style.id = '__tweak-overrides'; document.head.appendChild(style); }
+    style.textContent = `
+      :root { --f: ${fontStack}; --c-sage: ${accent}; }
+      section video { opacity: ${1 - overlay} !important; }
+    `;
+  }
+
+  componentDidMount() {
+    this._applyProps();
+
+    const applyNoRail = () => {
+      const el = document.querySelector('deck-stage');
+      if (el && !el.hasAttribute('no-rail')) el.setAttribute('no-rail', '');
+      return !!el;
+    };
+    if (!applyNoRail()) {
+      const railObs = new MutationObserver(() => { if (applyNoRail()) railObs.disconnect(); });
+      railObs.observe(document.body, { childList: true, subtree: true });
+    }
+    // Belt-and-suspenders: re-assert shortly after in case something clears it
+    setTimeout(applyNoRail, 300);
+    setTimeout(applyNoRail, 1200);
+
+    const observer = new MutationObserver((mutations) => {
+      for (const { target, attributeName } of mutations) {
+        if (attributeName !== 'data-deck-active' || target.tagName !== 'SECTION') continue;
+        const v = target.querySelector('video');
+        if (!v) continue;
+        if (target.hasAttribute('data-deck-active')) {
+          v.muted = true; v.currentTime = 0; v.play().catch(() => {});
+        } else {
+          v.pause();
+        }
+      }
+    });
+
+    // Observe the whole document subtree — catches sections deck-stage initialises after mount
+    observer.observe(document.body, {
+      attributes: true,
+      attributeFilter: ['data-deck-active'],
+      subtree: true
+    });
+
+    // Play any video already active on load
+    setTimeout(() => {
+      const v = document.querySelector('section[data-deck-active] video');
+      if (v) { v.muted = true; v.currentTime = 0; v.play().catch(() => {}); }
+    }, 400);
+
+    // Robust JS-driven crossfade rotator for image galleries (no CSS-timing gaps ever).
+    // Slides may mount lazily (deck-stage), so keep re-scanning for new .gallery-track elements.
+    const initGalleryTracks = () => {
+      document.querySelectorAll('.gallery-track').forEach((track) => {
+        if (track.dataset.rotatorInit) return;
+        track.dataset.rotatorInit = '1';
+        const layers = [...track.querySelectorAll('.gallery-layer')];
+        if (layers.length < 2) return;
+        let idx = 0;
+        setInterval(() => {
+          idx = (idx + 1) % layers.length;
+          layers.forEach((l, i) => { l.style.opacity = i === idx ? '1' : '0'; });
+        }, 6000);
+      });
+    };
+    initGalleryTracks();
+    setInterval(initGalleryTracks, 1000);
+
+    // Belt-and-suspenders: force every video on the page to stay muted, forever
+    const forceMuteAll = () => {
+      document.querySelectorAll('video').forEach((v) => {
+        if (!v.muted) v.muted = true;
+        v.defaultMuted = true;
+        v.volume = 0;
+      });
+    };
+    forceMuteAll();
+    setInterval(forceMuteAll, 500);
+    document.addEventListener('volumechange', forceMuteAll, true);
+    document.addEventListener('play', forceMuteAll, true);
+  }
+}
+</script>
+</body>
+</html>

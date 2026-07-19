@@ -1,0 +1,75 @@
+/* Fiskaregården — Color Tokens
+ * Derived from brand imagery and architecture.
+ * Palette: West-coast Scandinavian — chalk white, warm stone, terracotta, sage, sea.
+ */
+
+:root {
+  /* ── Base palette ───────────────────────────────── */
+
+  /* White & off-whites */
+  --color-white:        #FFFFFF;
+  --color-cream:        #F4F1EB;
+  --color-warm-white:   #EDE9E1;
+
+  /* Stone / neutrals */
+  --color-stone-50:     #EAE6DF;
+  --color-stone-100:    #D9D4CB;
+  --color-stone-200:    #C5BDB3;
+  --color-stone-300:    #A89E93;
+  --color-stone-400:    #8C8278;
+  --color-stone-500:    #6E6560;
+  --color-stone-600:    #524D49;
+  --color-stone-700:    #3A3733;
+  --color-stone-800:    #252220;
+  --color-stone-900:    #141210;
+
+  /* Terracotta — Brf Leopold red, warm accent */
+  --color-terra-100:    #F5DDD8;
+  --color-terra-200:    #E8B5AC;
+  --color-terra-300:    #D4816F;
+  --color-terra-400:    #C4573E;
+  --color-terra-500:    #B44030;
+  --color-terra-600:    #8F3224;
+  --color-terra-700:    #6A2419;
+
+  /* Sage — bedroom walls, coastal vegetation */
+  --color-sage-100:     #E1EDEA;
+  --color-sage-200:     #BBCFCA;
+  --color-sage-300:     #8BA89E;
+  --color-sage-400:     #6A8E83;
+  --color-sage-500:     #4E7269;
+
+  /* Sea — water & sky */
+  --color-sea-100:      #D6EAF0;
+  --color-sea-200:      #A9D1DF;
+  --color-sea-300:      #6FA3B5;
+  --color-sea-400:      #4A869A;
+  --color-sea-500:      #2D6579;
+
+  /* ── Semantic / UI aliases ──────────────────────── */
+
+  /* Backgrounds */
+  --bg-page:            #EFEAE0;
+  --bg-surface:         #F7F4EE;
+  --bg-subtle:          var(--color-stone-50);
+  --bg-inverse:         var(--color-stone-800);
+
+  /* Text */
+  --text-primary:       var(--color-stone-900);
+  --text-secondary:     var(--color-stone-500);
+  --text-muted:         var(--color-stone-300);
+  --text-inverse:       var(--color-white);
+  --text-accent:        var(--color-terra-500);
+
+  /* Borders */
+  --border-subtle:      var(--color-stone-100);
+  --border-default:     var(--color-stone-200);
+  --border-strong:      var(--color-stone-400);
+
+  /* Interactive / accent */
+  --accent-primary:     var(--color-terra-500);
+  --accent-primary-hover: var(--color-terra-600);
+  --accent-primary-active: var(--color-terra-700);
+  --accent-secondary:   var(--color-sage-300);
+  --accent-muted:       var(--color-terra-100);
+}

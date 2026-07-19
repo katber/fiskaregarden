@@ -1,0 +1,19 @@
+/* Fiskaregården — Shadow Tokens
+ * Minimal, warm-tinted shadows. No heavy drop shadows.
+ * Inspired by natural light in Scandinavian interiors.
+ */
+
+:root {
+  /* ── Elevation shadows ──────────────────────────── */
+  --shadow-none:  none;
+  --shadow-xs:    0 1px 2px rgba(28, 26, 24, 0.06);
+  --shadow-sm:    0 2px 8px rgba(28, 26, 24, 0.07);
+  --shadow-md:    0 4px 16px rgba(28, 26, 24, 0.08);
+  --shadow-lg:    0 8px 32px rgba(28, 26, 24, 0.10);
+  --shadow-xl:    0 16px 64px rgba(28, 26, 24, 0.12);
+
+  /* ── Semantic ───────────────────────────────────── */
+  --shadow-card:    var(--shadow-sm);
+  --shadow-modal:   var(--shadow-xl);
+  --shadow-nav:     0 1px 0 var(--border-subtle);
+}
