@@ -1,11 +1,18 @@
 # Fiskaregården – presentation
 
 Statisk webbpresentation. `index.html` i roten, alla resurser ligger i `uploads/` och `_ds/`.
+Porträtt och projektbilder som dragits in i presentationen är inbakade direkt i `index.html`.
 
-## Publicera på Netlify via GitHub
-1. Skapa ett nytt repo på GitHub och ladda upp **allt innehåll i den här mappen** (inte mappen i sig — `index.html` ska ligga i repots rot).
-2. I Netlify: **Add new site → Import an existing project → GitHub** och välj repot.
-3. Bygginställningar: lämna **Build command** tomt och sätt **Publish directory** till `.` (punkt).
+## Uppdatera ett befintligt repo (GitHub i webbläsaren)
+1. Öppna repot → **Add file → Upload files**.
+2. Dra in **innehållet** i den här mappen (inte mappen i sig).
+3. GitHub skriver över filer med samma namn — bekräfta med **Commit changes**.
+4. Netlify bygger om automatiskt inom ett par minuter.
+
+Vid en uppdatering räcker det oftast med `index.html`, `image-slot.js`, `support.js` och `deck-stage.js` — `uploads/` och `_ds/` behöver bara laddas upp när nya bilder eller videor tillkommit.
+
+## Första gången (Netlify via GitHub)
+1. Skapa repo och ladda upp innehållet i mappen så att `index.html` ligger i roten.
+2. Netlify: **Add new site → Import an existing project → GitHub**.
+3. Build command: tomt. Publish directory: `.`
 4. Deploy.
-
-Ingen byggprocess behövs — det är rena statiska filer.
